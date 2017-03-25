@@ -8,12 +8,18 @@ import android.widget.Button;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import liophan.designpatterndemo.behavioral.observer.ObserverActivity;
 import liophan.designpatterndemo.behavioral.strategy.StrategyActivity;
+import liophan.designpatterndemo.creational.factory.FactoryActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     @BindView(R.id.btnStrategy)
     Button btnStrategy;
+    @BindView(R.id.btnObserver)
+    Button btnObserver;
+    @BindView(R.id.btnFactory)
+    Button btnFactory;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +28,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ButterKnife.bind(this);
 
         btnStrategy.setOnClickListener(this);
+        btnObserver.setOnClickListener(this);
+        btnFactory.setOnClickListener(this);
     }
 
     @Override
@@ -29,6 +37,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.btnStrategy:
                 startActivity(StrategyActivity.class);
+                break;
+            case R.id.btnObserver:
+                startActivity(ObserverActivity.class);
+                break;
+            case R.id.btnFactory:
+                startActivity(FactoryActivity.class);
                 break;
         }
     }

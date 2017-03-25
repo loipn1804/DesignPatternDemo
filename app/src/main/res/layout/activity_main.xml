@@ -17,5 +17,17 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="Strategy"/>
+
+        <Button
+            android:id="@+id/btnObserver"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Observer"/>
+
+        <Button
+            android:id="@+id/btnFactory"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Factory"/>
     </LinearLayout>
 </ScrollView>
