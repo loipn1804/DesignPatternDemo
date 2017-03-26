@@ -29,5 +29,17 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="Factory"/>
+
+        <Button
+            android:id="@+id/btnAbstractFactory"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="AbstractFactory"/>
+
+        <Button
+            android:id="@+id/btnSingleTon"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="SingleTon"/>
     </LinearLayout>
 </ScrollView>

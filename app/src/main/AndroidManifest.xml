@@ -26,6 +26,12 @@
         <activity
             android:name=".creational.factory.FactoryActivity"
             android:screenOrientation="portrait"/>
+        <activity
+            android:name=".creational.abstractfactory.AbstractFactoryActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".creational.singleton.SingletonActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

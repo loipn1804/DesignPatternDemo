@@ -1,4 +1,4 @@
-package liophan.designpatterndemo.creational.factory;
+package liophan.designpatterndemo.creational.abstractfactory;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -6,8 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-
-import java.util.Random;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -18,25 +16,19 @@ import liophan.designpatterndemo.R;
  *
  * @author Lio <lphan@stacck.com>
  * @version 1.0
- * @since March 25, 2017
+ * @since March 26, 2017
  */
 
-public class FactoryActivity extends AppCompatActivity {
+public class AbstractFactoryActivity extends AppCompatActivity {
 
     @BindView(R.id.btnAction)
     Button btnAction;
 
-    private EnemyShipFactory mEnemyShipFactory;
-    private Random mRandom;
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_factory);
+        setContentView(R.layout.activity_abstract_factory);
         ButterKnife.bind(this);
-
-        mEnemyShipFactory = new EnemyShipFactory();
-        mRandom = new Random();
 
         btnAction.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,13 +39,12 @@ public class FactoryActivity extends AppCompatActivity {
     }
 
     private void action() {
-        EnemyShip enemyShip = mEnemyShipFactory.makeEnemyShip(mRandom.nextInt(4));
-        if (enemyShip != null) {
-            enemyShip.displayEnemyShip();
-            enemyShip.followHeroShip();
-            enemyShip.enemyShipShoot();
-        } else {
-            Log.e("LIO", "No have enemy ship.");
-        }
+        EnemyShipBuilding enemyShipBuilding = new UFOEnemyShipBuilding();
+
+        EnemyShip smallShip = enemyShipBuilding.orderTheShip(1);
+        Log.e("LIO", smallShip.info());
+
+        EnemyShip bossShip = enemyShipBuilding.orderTheShip(2);
+        Log.e("LIO", bossShip.info());
     }
 }

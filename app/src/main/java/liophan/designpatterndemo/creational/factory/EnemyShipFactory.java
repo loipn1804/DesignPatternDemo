@@ -10,8 +10,8 @@ package liophan.designpatterndemo.creational.factory;
 
 public class EnemyShipFactory {
 
-    public EnemyShip makeEnemyShip(int type) {
-        switch (type) {
+    public EnemyShip makeEnemyShip(int typeOfShip) {
+        switch (typeOfShip) {
             case 1:
                 return new UFOEnemyShip();
             case 2:
