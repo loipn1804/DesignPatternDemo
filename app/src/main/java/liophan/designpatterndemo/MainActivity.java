@@ -11,6 +11,7 @@ import butterknife.ButterKnife;
 import liophan.designpatterndemo.behavioral.observer.ObserverActivity;
 import liophan.designpatterndemo.behavioral.strategy.StrategyActivity;
 import liophan.designpatterndemo.creational.abstractfactory.AbstractFactoryActivity;
+import liophan.designpatterndemo.creational.builder.BuilderActivity;
 import liophan.designpatterndemo.creational.factory.FactoryActivity;
 import liophan.designpatterndemo.creational.singleton.Singleton;
 import liophan.designpatterndemo.creational.singleton.SingletonActivity;
@@ -27,6 +28,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btnAbstractFactory;
     @BindView(R.id.btnSingleTon)
     Button btnSingleTon;
+    @BindView(R.id.btnBuilder)
+    Button btnBuilder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnFactory.setOnClickListener(this);
         btnAbstractFactory.setOnClickListener(this);
         btnSingleTon.setOnClickListener(this);
+        btnBuilder.setOnClickListener(this);
     }
 
     @Override
@@ -58,6 +62,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btnSingleTon:
                 startActivity(SingletonActivity.class);
+                break;
+            case R.id.btnBuilder:
+                startActivity(BuilderActivity.class);
                 break;
         }
     }

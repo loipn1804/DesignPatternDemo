@@ -41,5 +41,11 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="SingleTon"/>
+
+        <Button
+            android:id="@+id/btnBuilder"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Builder"/>
     </LinearLayout>
 </ScrollView>
