@@ -13,6 +13,7 @@ import liophan.designpatterndemo.behavioral.strategy.StrategyActivity;
 import liophan.designpatterndemo.creational.abstractfactory.AbstractFactoryActivity;
 import liophan.designpatterndemo.creational.builder.BuilderActivity;
 import liophan.designpatterndemo.creational.factory.FactoryActivity;
+import liophan.designpatterndemo.creational.prototype.PrototypeActivity;
 import liophan.designpatterndemo.creational.singleton.Singleton;
 import liophan.designpatterndemo.creational.singleton.SingletonActivity;
 
@@ -30,6 +31,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btnSingleTon;
     @BindView(R.id.btnBuilder)
     Button btnBuilder;
+    @BindView(R.id.btnPrototype)
+    Button btnPrototype;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnAbstractFactory.setOnClickListener(this);
         btnSingleTon.setOnClickListener(this);
         btnBuilder.setOnClickListener(this);
+        btnPrototype.setOnClickListener(this);
     }
 
     @Override
@@ -65,6 +69,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btnBuilder:
                 startActivity(BuilderActivity.class);
+                break;
+            case R.id.btnPrototype:
+                startActivity(PrototypeActivity.class);
                 break;
         }
     }

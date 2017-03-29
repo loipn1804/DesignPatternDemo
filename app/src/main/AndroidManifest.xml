@@ -35,6 +35,9 @@
         <activity
             android:name=".creational.builder.BuilderActivity"
             android:screenOrientation="portrait"/>
+        <activity
+            android:name=".creational.prototype.PrototypeActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
