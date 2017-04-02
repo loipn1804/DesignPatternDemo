@@ -38,6 +38,9 @@
         <activity
             android:name=".creational.prototype.PrototypeActivity"
             android:screenOrientation="portrait"/>
+        <activity
+            android:name=".other.reflection.ReflectionActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
