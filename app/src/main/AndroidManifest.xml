@@ -41,6 +41,9 @@
         <activity
             android:name=".other.reflection.ReflectionActivity"
             android:screenOrientation="portrait"/>
+        <activity
+            android:name=".structural.decorator.DecoratorActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

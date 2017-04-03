@@ -17,6 +17,7 @@ import liophan.designpatterndemo.creational.prototype.PrototypeActivity;
 import liophan.designpatterndemo.creational.singleton.Singleton;
 import liophan.designpatterndemo.creational.singleton.SingletonActivity;
 import liophan.designpatterndemo.other.reflection.ReflectionActivity;
+import liophan.designpatterndemo.structural.decorator.DecoratorActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -36,6 +37,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btnPrototype;
     @BindView(R.id.btnReflection)
     Button btnReflection;
+    @BindView(R.id.btnDecorator)
+    Button btnDecorator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +54,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnBuilder.setOnClickListener(this);
         btnPrototype.setOnClickListener(this);
         btnReflection.setOnClickListener(this);
+        btnDecorator.setOnClickListener(this);
     }
 
     @Override
@@ -79,6 +83,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btnReflection:
                 startActivity(ReflectionActivity.class);
+                break;
+            case R.id.btnDecorator:
+                startActivity(DecoratorActivity.class);
                 break;
         }
     }

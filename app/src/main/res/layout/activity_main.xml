@@ -59,5 +59,11 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="Reflection"/>
+
+        <Button
+            android:id="@+id/btnDecorator"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Decorator"/>
     </LinearLayout>
 </ScrollView>
